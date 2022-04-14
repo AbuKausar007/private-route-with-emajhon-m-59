@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSignIn } from "@fortawesome/free-solid-svg-icons";
 import "./Login.css";
 
 const Login = () => {
@@ -10,11 +12,11 @@ const Login = () => {
         <form action="">
           <div className="input-group">
             <label htmlFor="email">Email</label>
-            <input type="email" name="email" id="" />
+            <input type="email" name="email" id="" required />
           </div>
           <div className="input-group">
             <label htmlFor="password">Password</label>
-            <input type="password" name="password" id="" />
+            <input type="password" name="password" id="" required />
           </div>
           <input className="login-btn" type="submit" value="Login" />
         </form>
@@ -31,7 +33,8 @@ const Login = () => {
           className="google-btn"
           style={{ marginBottom: "25px", marginTop: "10px" }}
         >
-          Continue With Google
+          <FontAwesomeIcon icon={faSignIn}></FontAwesomeIcon> Continue With
+          Google
         </button>
       </div>
     </div>
