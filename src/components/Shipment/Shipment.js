@@ -15,10 +15,6 @@ const Shipment = () => {
     setName(event.target.value);
   };
 
-  const handleEmailBlur = (event) => {
-    setEmail(event.target.value);
-  };
-
   const handleAddressBlur = (event) => {
     setAddress(event.target.value);
   };
@@ -29,6 +25,8 @@ const Shipment = () => {
 
   const hanldeCreateUser = (event) => {
     event.preventDefault();
+    const shipping = { name, email, address, phone };
+    console.log(shipping);
   };
   return (
     <div className="form-container">
